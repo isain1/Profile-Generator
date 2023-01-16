@@ -3,13 +3,14 @@ const generateTeam = team => {
         return `
         <div class="card employee-card">
             <div class="card-header">
+                <h1>Manager:</h1><br>
                 <h2 class="card-title">${manager.getName()}</h2>
                 <h3 class="card-title"><i class="fas fa-mug-hot mr-2"</i></h3>
             </div>
             <div class="card-body">
                 <ul class="list-group>
                     <li class="list-group-item">ID: ${manager.getId()}</li>
-                    <li class="list-group-item">Email: <a href="mailto:"${manager.getEmail()}>${manager.getEmail}</a></li>
+                    <li class="list-group-item">Email: <a href="mailto:"github.com/${manager.getEmail()} target="_blank">${manager.getEmail()}</a></li>
                     <li class="list-group-item">Office number: ${manager.getOfficeNumber()}</li>
                 </ul>
             </div>
@@ -20,14 +21,15 @@ const generateTeam = team => {
         return `
         <div class="card employee-card">
             <div class="card-header">
+            <h1>Engineer:</h1><br>
                 <h2 class="card-title">${engineer.getName()}</h2>
                 <h3 class="card-title"><i class="fas fa-mug-hot mr-2"</i></h3>
             </div>
             <div class="card-body">
                 <ul class="list-group>
                     <li class="list-group-item">ID: ${engineer.getId()}</li>
-                    <li class="list-group-item">Email: <a href="mailto:"${engineer.getEmail()}>${engineer.getEmail}</a></li>
-                    <li class="list-group-item">Office number: ${engineer.getGithub()}</li>
+                    <li class="list-group-item">Email: <a href="mailto:"${engineer.getEmail()}> ${engineer.getEmail()} </a></li>
+                    <li class="list-group-item">Github: <a href="github.com/${engineer.getGithub()}">${engineer.getGithub()}</a></li>
                 </ul>
             </div>
         </div>`
@@ -37,14 +39,15 @@ const generateTeam = team => {
         return `
         <div class="card employee-card">
             <div class="card-header">
+                <h1>Intern:</h1><br>
                 <h2 class="card-title">${intern.getName()}</h2>
                 <h3 class="card-title"><i class="fas fa-mug-hot mr-2"</i></h3>
             </div>
             <div class="card-body">
                 <ul class="list-group>
                     <li class="list-group-item">ID: ${intern.getId()}</li>
-                    <li class="list-group-item">Email: <a href="mailto:"${intern.getEmail()}>${intern.getEmail}</a></li>
-                    <li class="list-group-item">Office number: ${intern.getSchool()}</li>
+                    <li class="list-group-item">Email: <a href="mailto:"${intern.getEmail()}>${intern.getEmail()}</a></li>
+                    <li class="list-group-item">School: ${intern.getSchool()}</li>
                 </ul>
             </div>
         </div>`
@@ -79,7 +82,7 @@ module.exports = team => {
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>${team.manager.getName()}'s team</title>
+        <title>generated team</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css"
     </head>
