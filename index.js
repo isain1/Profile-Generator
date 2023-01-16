@@ -337,7 +337,7 @@ function createTeam() {
       .prompt([
         {
           type: "list",
-          message: "Which employee would you like to select?",
+          message: "Which employee would you like to create?",
           name: "addEmployee",
           choices: ["Engineer", "Intern", "Finish building team"],
         },
@@ -345,10 +345,6 @@ function createTeam() {
       .then(function (userInput) {
         console.log(userInput);
         switch (userInput.addEmployee) {
-          case "Manager":
-            addManager();
-            break;
-
           case "Engineer":
             addEngineer();
             break;
